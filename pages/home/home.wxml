@@ -1,0 +1,11 @@
+<view class='video-list'>
+  <block wx:for='{{videolist}}' wx:key='id' wx:for-item="item">
+    <view class='video-item' bindtap='videodetail' data-item='{{item}}'>
+      <view class='vip-view'>
+          <image class='video-cover' src='{{base_img_url + item.video_fover}}' mode='aspectFill'></image>
+          <image wx:if='{{item.is_vip == 1}}' class='vip-img' src='../../images/vip_icon.png'></image>
+      </view>
+      <text class='video-title'>{{item.video_title}}</text>
+    </view>
+  </block>
+</view>
