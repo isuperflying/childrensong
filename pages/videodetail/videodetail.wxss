@@ -1,0 +1,88 @@
+/* pages/videodetail/videodetail.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.video-view {
+  width: 96%;
+  height: 405rpx;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.video-play {
+  width: 100%;
+  height: 100%;
+}
+
+.video-title-view {
+  width: 100%;
+  height: 100rpx;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+}
+.video-title {
+  color: #333;
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-left: 20rpx;
+}
+
+.video-desp-view {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+
+.desp-img {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+}
+
+.desp-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.desp-title{
+  color: #000;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.desp-remark {
+  color: #aaa;
+  font-size: 26rpx;
+  line-height: 150%;
+  margin-right: 20rpx;
+}
+
+.share-view {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 30rpx;
+  left: 0;
+}
+
+.share-btn {
+  background: #ff7b7b;
+  width: 50%;
+  height: 88rpx;
+  color: #fff;
+  border-radius: 26px;
+}
+
+button,button::after{
+  border: 0;
+}

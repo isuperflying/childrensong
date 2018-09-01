@@ -1,4 +1,24 @@
+<swiper class="swiper-top" indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banner}}"  wx:key="id" wx:for-item="item">
+      <swiper-item>
+          <image src="{{item.img_url}}" class="slide-image" mode='widthFix' bindtap='banner'/>
+      </swiper-item>
+    </block>
+  </swiper>
+<view class='ages-view'>
+  <block wx:for='{{ageslist}}' wx:key='id' wx:for-item="item">
+      <view class='ages-item' bindtap='category' data-typeid='{{item.type}}'>
+        <image class='ages-img' src='{{item.img_url}}'></image>
+        <text class='ages-title'>{{item.title}}</text>
+      </view>
+  </block>
+</view>
 <view class='video-list'>
+  <view class='video-top-view'>
+    <view class='top-color'></view>
+    <text class='video-top'>精选推荐</text>
+  </view>
   <block wx:for='{{videolist}}' wx:key='id' wx:for-item="item">
     <view class='video-item' bindtap='videodetail' data-item='{{item}}'>
       <view class='vip-view'>

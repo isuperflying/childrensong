@@ -4,13 +4,53 @@ page {
   background: #f8f8f8;
 }
 
+.swiper-top {
+  width: 100%;
+  background: #fff;
+}
+
+.slide-image {
+  display: block;
+  clear: both;
+  width: 96%;
+  height: 194rpx;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  border-radius: 3px;
+}
+
 .video-list {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 1%;
-  margin-top: 12rpx;
+  margin-top: 16rpx;
+  background: #fff;
+}
+
+.video-top-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 16rpx;
+}
+
+.top-color {
+  width: 10rpx;
+  height: 30rpx;
+  background: #ff7b7b;
+  border-radius: 5px;
+  margin-left: 10rpx;
+}
+
+.video-top {
+  color: #000;
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-left: 10rpx;
 }
 
 .video-item {
@@ -45,7 +85,7 @@ page {
   width: 82rpx;
   height: 38rpx;
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
 }
 
@@ -53,5 +93,35 @@ page {
   height: 48rpx;
   font-size: 28rpx;
   color: #000;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
+}
+
+.ages-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 1%;
+  margin-top: 16rpx;
+  background: #fff;
+}
+
+.ages-item {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ages-img {
+  width: 114rpx;
+  height: 114rpx;
+  margin-top: 10rpx;
+}
+
+.ages-title {
+  color: #4a4a4a;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
 }

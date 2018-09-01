@@ -1,6 +1,6 @@
 const app = getApp()
 
-var baseUrl = 'http://192.168.80.97:8888/'
+var baseUrl = 'http://192.168.1.104:8888/'
 
 var list = null
 var page = 1
@@ -13,7 +13,39 @@ Page({
    */
   data: {
     base_img_url: baseUrl + 'images/',
-    base_video_url: baseUrl + 'video/',
+    base_video_url: baseUrl + 'videos/',
+    banner: [{ 'img_url': '../../images/banner.png' }],
+    ageslist: [{
+        'type':'1',
+        'img_url': '../../images/0-1.png',
+        'title': '0-1岁'
+      },
+      {
+        'type': '2',
+        'img_url': '../../images/1-2.png',
+        'title': '1-2岁'
+      },
+      {
+        'type': '3',
+        'img_url': '../../images/2-3.png',
+        'title': '2-3岁'
+      },
+      {
+        'type': '4',
+        'img_url': '../../images/3-4.png',
+        'title': '3-4岁'
+      },
+      {
+        'type': '5',
+        'img_url': '../../images/4-5.png',
+        'title': '4-5岁'
+      },
+      {
+        'type': '6',
+        'img_url': '../../images/5-6.png',
+        'title': '5-6岁'
+      },
+    ]
   },
 
   /**
@@ -21,7 +53,7 @@ Page({
    */
   onLoad: function(options) {
     wx.setNavigationBarTitle({
-      title: '视频列表',
+      title: '儿歌乐园',
     })
     this.loadData();
   },
@@ -36,7 +68,7 @@ Page({
     wx.request({
       url: url,
       data: {
-        'typeid':0
+        'typeid': 0
       },
       method: 'GET',
       success: function(result) {
@@ -47,16 +79,26 @@ Page({
       }
     })
   },
-  
+
   onReachBottom: function(e) {
     this.loadData();
   },
 
   videodetail: function(e) {
-    console.log(e.currentTarget.dataset.item)
-
+    //console.log(e.currentTarget.dataset.item)
+    var obj = e.currentTarget.dataset.item
+    var video_item = JSON.stringify(obj);
+    wx.navigateTo({
+      url: '/pages/videodetail/videodetail?video_item=' + video_item
+    })
   },
-  
+
+  category:function(e){
+    var typeid = e.currentTarget.dataset.typeid
+    wx.navigateTo({
+      url: '/pages/category/category?typeid=' + typeid
+    })
+  },
   onShareAppMessage: function() {
 
   }
