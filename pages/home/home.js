@@ -1,6 +1,6 @@
 const app = getApp()
 
-var baseUrl = 'http://192.168.1.104:8888/'
+var baseUrl = 'http://192.168.80.97:8888/'
 
 var list = null
 var page = 1
@@ -72,17 +72,29 @@ Page({
       },
       method: 'GET',
       success: function(result) {
+        wx.stopPullDownRefresh();
         console.log(result.data.data)
         that.setData({
           videolist: result.data.data
         })
+      },
+      fail: function (res) {
+        wx.stopPullDownRefresh()
       }
     })
   },
 
-  onReachBottom: function(e) {
-    this.loadData();
+  /**
+     * 页面相关事件处理函数--监听用户下拉动作
+     */
+  onPullDownRefresh: function () {
+    this.data.videolist = null
+    this.getData()
   },
+
+  // onReachBottom: function(e) {
+  //   this.loadData();
+  // },
 
   videodetail: function(e) {
     //console.log(e.currentTarget.dataset.item)
@@ -93,13 +105,26 @@ Page({
     })
   },
 
-  category:function(e){
-    var typeid = e.currentTarget.dataset.typeid
+  banner:function(e){
+    var typeid = 1
+    var type_name = '热门'
     wx.navigateTo({
-      url: '/pages/category/category?typeid=' + typeid
+      url: '/pages/category/category?typeid=' + typeid + '&type_name=' + type_name
     })
   },
-  onShareAppMessage: function() {
+  category:function(e){
+    var typeid = e.currentTarget.dataset.typeid
+    var type_name = e.currentTarget.dataset.title
+    wx.navigateTo({
+      url: '/pages/category/category?typeid=' + typeid + '&type_name=' + type_name
+    })
+  },
 
+  onShareAppMessage: function () {
+    return {
+      title: '儿歌乐园，宝宝快乐的源泉!',
+      path: '/pages/home/home',
+      imageUrl: '/images/share_img.png'
+    }
   }
 })

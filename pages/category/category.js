@@ -1,6 +1,6 @@
 const app = getApp()
 
-var baseUrl = 'http://192.168.1.104:8888/'
+var baseUrl = 'http://192.168.80.97:8888/'
 
 var list = null
 var page = 1
@@ -21,7 +21,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '儿歌乐园',
+      title: options.type_name + '儿歌',
     })
     typeid = options.typeid
     this.loadData();
@@ -37,24 +37,48 @@ Page({
     wx.request({
       url: url,
       data: {
+        'page':page,
         'typeid': typeid
       },
       method: 'POST',
       success: function (result) {
         console.log(result.data.data)
+        wx.hideLoading();
+        wx.stopPullDownRefresh();
+        if (page == 1) {
+          list = result.data.data;
+        } else {
+          if (list != null) {
+            list = list.concat(result.data.data);
+          }
+        }
+
         that.setData({
-          videolist: result.data.data
+          videolist: list
         })
+      },
+      fail: function (res) {
+        wx.hideLoading();
+        wx.stopPullDownRefresh();
       }
     })
   },
 
-  onReachBottom: function (e) {
+  onPullDownRefresh: function () {
+    list = null
+    this.data.videolist = null
+    this.loadData()
+  },
+
+  /**
+     * 页面上拉触底事件的处理函数
+     */
+  onReachBottom: function () {
+    page++;
     this.loadData();
   },
 
   videodetail: function (e) {
-    //console.log(e.currentTarget.dataset.item)
     var obj = e.currentTarget.dataset.item
     var video_item = JSON.stringify(obj);
     wx.navigateTo({

@@ -6,17 +6,14 @@ page {
 
 .swiper-top {
   width: 100%;
-  background: #fff;
+  background: #f8f8f8;
 }
 
 .slide-image {
   display: block;
   clear: both;
-  width: 96%;
-  height: 194rpx;
-  margin-left: 2%;
-  margin-bottom: 2%;
-  border-radius: 3px;
+  width: 100%;
+  height: 294rpx;
 }
 
 .video-list {
@@ -24,8 +21,7 @@ page {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 1%;
-  margin-top: 16rpx;
+  margin-top: 12rpx;
   background: #fff;
 }
 
@@ -54,31 +50,31 @@ page {
 }
 
 .video-item {
-  width: 46%;
-  height: auto;
+  width: 50%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   border-radius: 2px;
-  margin: 1%;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 10rpx;
 }
 
 .vip-view {
-  width: 96%;
+  width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: flex-start;
 }
 
 .video-cover {
-  width: 96%;
+  width: 92%;
   height: 194rpx;
-  margin-top: 10rpx;
-  margin-left: 2%;
-  margin-right: auto;
-  margin-bottom: 0px;
   border-radius: 6px;
+  margin-left: 4%;
 }
 
 .vip-img {
@@ -101,8 +97,7 @@ page {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 1%;
-  margin-top: 16rpx;
+  margin-top: 6rpx;
   background: #fff;
 }
 
@@ -124,4 +119,19 @@ page {
   color: #4a4a4a;
   font-size: 28rpx;
   margin-bottom: 10rpx;
+}
+
+.bottom-view {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+  border-top: 1rpx solid #f8f8f8;
+}
+
+.bottom-txt {
+  color: #cdcdcd;
+  font-size: 26rpx;
 }

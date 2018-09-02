@@ -10,6 +10,7 @@ page {
   height: 405rpx;
   margin-left: 2%;
   margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .video-play {
