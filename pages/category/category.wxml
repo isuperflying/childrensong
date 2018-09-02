@@ -8,4 +8,7 @@
       <text class='video-title'>{{item.video_title}}</text>
     </view>
   </block>
+  <view class='bottom-view' wx:if='{{is_end}}'>
+    <text class='bottom-txt'>没有更多啦</text>
+  </view>
 </view>

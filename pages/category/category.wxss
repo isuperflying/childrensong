@@ -50,8 +50,24 @@ page {
 }
 
 .video-title {
-  height: 48rpx;
-  font-size: 28rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 30rpx;
   color: #000;
   text-overflow: ellipsis;
+}
+
+.bottom-view {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+  border-top: 1rpx solid #f8f8f8;
+}
+
+.bottom-txt {
+  color: #cdcdcd;
+  font-size: 26rpx;
 }

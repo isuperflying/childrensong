@@ -32,3 +32,7 @@
     <text class='bottom-txt'>没有更多啦</text>
   </view>
 </view>
+<view class='version-content'>
+  <text class='video-style'>儿歌乐园</text>
+  <text class='video-version' bindtap='version'>免责申明</text>
+</view>
