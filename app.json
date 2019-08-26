@@ -1,16 +1,21 @@
 {
-  "pages":[
+  "pages": [
     "pages/home/home",
     "pages/category/category",
     "pages/videodetail/videodetail",
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#5ad797",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"white",
-    "onReachBottomDistance": "20rpx"
-  }
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 20
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx963826dfb4212295",
+    "wx572fce5031dcef34"
+  ],
+  "sitemapLocation": "sitemap.json"
 }

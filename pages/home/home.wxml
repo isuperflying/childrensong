@@ -36,3 +36,11 @@
   <text class='video-style'>儿歌乐园</text>
   <text class='video-version' bindtap='version'>免责申明</text>
 </view>
+
+<view class='float-view'>
+    <view class="float-view-wrapper">
+      <image class='float-iamge' src='../../images/read_word.gif' mode='widthFix' bindtap='newApp'></image>
+      
+      <navigator class="nav-view" wx:if='{{isUse}}' target="miniProgram" open-type="navigate" app-id="{{app_id}}" path="" extra-data="" version="release"></navigator>
+    </view>
+  </view>

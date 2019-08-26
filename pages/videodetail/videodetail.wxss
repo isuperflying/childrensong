@@ -35,15 +35,15 @@ page {
 .video-desp-view {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 20rpx;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rpx;
 }
 
 .desp-img {
-  width: 180rpx;
-  height: 180rpx;
-  margin: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 16rpx;
 }
 
 .desp-content {
@@ -56,7 +56,7 @@ page {
 
 .desp-title{
   color: #000;
-  font-size: 32rpx;
+  font-size: 24rpx;
   font-weight: 600;
 }
 
@@ -86,4 +86,31 @@ page {
 
 button,button::after{
   border: 0;
+}
+
+
+.group2 {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3%;
+  margin-top: 5%;
+  background: #adedff;
+  margin-bottom: 24rpx;
+  position: relative;
+}
+
+.learn-word {
+  width: 750rpx;
+  height: 260rpx;
+}
+
+.nav-view {
+  width: 750rpx;
+  height: 260rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
 }

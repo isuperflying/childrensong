@@ -16,7 +16,10 @@
       儿歌是孩子们认识这个世界的第一个窗口。这个世界美好的声音、色彩，都会留在孩子们的想像之中。它是对孩子们审美能力、想像能力、语言的感知能力的一种开发，让我们把快乐通过音乐般的节奏和旋律，传达给孩子们。　
     </text>
 </view>
-
+<view class='group2'>
+          <image class='learn-word' src='../../images/learn_word.png' bindtap='newApp'></image>
+          <navigator class="nav-view" wx:if='{{isUse}}' target="miniProgram" open-type="navigate" app-id="{{new_app_id}}" path="" extra-data="" version="release"></navigator>
+      </view>
 <view class='share-view'>
   <button class='share-btn' open-type='share'>分享给好友</button>
 </view>

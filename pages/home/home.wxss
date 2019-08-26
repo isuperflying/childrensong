@@ -159,3 +159,34 @@ page {
   border-radius: 3px;
   border: 1px solid #aaa;
 }
+
+
+.float-view {
+  position: fixed;
+  z-index: 101;
+  right: 0;
+  top:46%;
+}
+
+.float-view-wrapper {
+  position: relative;
+  width: 200rpx;
+  height: 112rpx;
+}
+
+.float-iamge {
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.nav-view {
+  width: 190rpx;
+  height: 146rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
